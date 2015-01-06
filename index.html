@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="scripts/libs/jquery-2.1.1.js"></script>
+<script src="scripts/gameRoomApp.js"></script>
+<script src="scripts/ajaxRequester.js"></script>
+<script src="scripts/userSession.js"></script>
+<header><h1 class="site-header">Game Room<span></span></h1></header>
+<nav id="menu">
+    <ul id="loginRegisterMenu">
+        <li class="nav-button"><a href="#" id="btnLoginView">Login</a></li>
+        <li class="nav-button"><a href="#" id="btnRegisterView">Register</a></li>
+        <li class="nav-button"><a href="#" id="btnShowListOfGames">Games</a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="register-form" id="registerUser">
+        <header class="main-header">Register</header>
+        <div class="data">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Username..."/>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password..."/>
+            <label for="confirm-password">Confirm password:</label>
+            <input type="password" id="confirm-password" placeholder="Password again..."/>
+        </div>
+        <div class="panel">
+            <button class="button" id="register-button">Register</button>
+            <span>or</span>
+            <a href="#" id="btnRegisterLogin">Login</a>
+        </div>
+    </div>
+</section>
+
+<br />
+
+<section>
+    <div class="login-form" id="loginUser">
+        <header class="main-header">Login</header>
+        <div class="data">
+            <label for="username">Username:</label>
+            <input type="text" id="loginUsername" placeholder="Username..."/>
+            <label for="password">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Password..."/>
+        </div>
+        <div class="panel">
+            <button id="login-button" class="button">Login</button>
+            <span>or</span>
+            <a href="#" id="btnLoginRegister">Register</a>
+        </div>
+    </div>
+</section>
+
+<br />
+
+<section>
+    <div class="games-display" id="gameListDisplay">
+        <header class="main-header">GAME LIST</header>
+        <ul>
+            <li>GAME 1</li>
+            <li>GAME 2</li>
+            <li>GAME 3</li>
+        </ul>
+    </div>
+</section>
+
+<br />
+
+<section>
+    <div class="games-display" id="gameListDisplayLogin">
+        <header class="main-header">GAME LIST</header>
+        <ul>
+            <li><a href="#" id="btnGame1">Game 1</a></li>
+            <li><a href="#" id="btnGame2">Game 2</a></li>
+            <li><a href="#" id="btnGame3">Game 3</a></li>
+            <li><a href="#" id="btnGame4">Game 4</a></li>
+        </ul>
+    </div>
+</section>
+
+<br />
+
+<footer>7 soft</footer>
+</body>
+</html>
