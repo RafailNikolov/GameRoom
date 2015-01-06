@@ -9,6 +9,7 @@
 <script src="scripts/gameRoomApp.js"></script>
 <script src="scripts/ajaxRequester.js"></script>
 <script src="scripts/userSession.js"></script>
+<script src="scripts/snakeGame.js"></script>
 <header><h1 class="site-header">Game Room<span></span></h1></header>
 <nav id="menu">
     <ul id="loginRegisterMenu">
@@ -73,9 +74,10 @@
 
 <section>
     <div class="games-display" id="gameListDisplayLogin">
+        <a href="#" id="btnLogout">Logout</a>
         <header class="main-header">GAME LIST</header>
         <ul>
-            <li><a href="#" id="btnGame1">Game 1</a></li>
+            <li><a href="#" id="btnGame1">Snake Game</a></li>
             <li><a href="#" id="btnGame2">Game 2</a></li>
             <li><a href="#" id="btnGame3">Game 3</a></li>
             <li><a href="#" id="btnGame4">Game 4</a></li>
@@ -85,6 +87,10 @@
 
 <br />
 
+
+
 <footer>7 soft</footer>
+<canvas id="canvas" width="450" height="450"></canvas>
 </body>
+
 </html>

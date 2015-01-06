@@ -18,6 +18,8 @@
         $("#btnLoginRegister").click(showRegisterView);
         $("#register-button").click(registerClicked);
         $("#login-button").click(loginClicked);
+        $("#btnLogout").click(logoutClicked);
+        $("#btnGame1").click(snakeGameView);
     }
 
 
@@ -65,8 +67,18 @@
        $("#gameListDisplay").hide();
        $("#gameListDisplayLogin").show();
        var currentUser = userSession.getCurrentUser();
-       $("body > header span").text(" -" + currentUser.username);
    }
+   function snakeGameView(){
+       $("#loginRegisterMenu").hide();
+       $("#registerUser").hide();
+       $("#loginUser").hide();
+       $("#gameListDisplay").hide();
+       $("#gameListDisplayLogin").hide();
+       $("#canvas").show();
+       snakeGame();
+   }
+
+
     //------------------------REGISTER--------------
 
 
@@ -114,6 +126,19 @@
     function loginError(){
         showErrorMsg("Login failed.");
     }
+
+
+//------------------------LOGOUT-------------------------------
+
+
+    function logoutClicked(){
+        userSession.logout();
+        showLoginRegisterView();
+
+    }
+
+
+
 
     //-------------------AUTHENTICATION------------------
 
