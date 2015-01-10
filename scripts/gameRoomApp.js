@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+var gameApp = (function() {
     $(function () {
         registerEventHandler();
         showLoginRegisterView();

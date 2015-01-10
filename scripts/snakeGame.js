@@ -80,10 +80,15 @@ var snakeGame = function(){
         //Now if the head of the snake bumps into its body, the game will restart
         if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx, ny, snake_array))
         {
-            //restart game
-            init();
+            if (confirm('Game Over.   Play Again?')) {
+                init()
+            } else {
+               alert('Your score is : ' + score);
+                location.reload();
+            }
+          //  init();
             //Lets organize the code a bit now.
-            return;
+           return;
         }
 
         //Lets write the code to make the snake eat the food
