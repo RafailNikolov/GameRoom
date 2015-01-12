@@ -67,6 +67,7 @@ var gameApp = (function() {
        $("#gameListDisplay").hide();
        $("#gameListDisplayLogin").show();
        var currentUser = userSession.getCurrentUser();
+       $('#gameListDisplayLogin > span').text("User : " +currentUser.username);
    }
    function snakeGameView(){
        $("#loginRegisterMenu").hide();

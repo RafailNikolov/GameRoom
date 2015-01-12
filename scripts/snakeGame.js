@@ -1,5 +1,6 @@
 var snakeGame = function(){
     //Canvas stuff
+    $('<canvas id="canvas" width="450" height="450">').appendTo('#gameSpace');
     var canvas = $("#canvas")[0];
     var ctx = canvas.getContext("2d");
     var w = $("#canvas").width();
@@ -83,12 +84,12 @@ var snakeGame = function(){
             if (confirm('Game Over.   Play Again?')) {
                 init()
             } else {
-               alert('Your score is : ' + score);
+                alert('Your score is : ' + score);
                 location.reload();
             }
-          //  init();
+            //  init();
             //Lets organize the code a bit now.
-           return;
+            return;
         }
 
         //Lets write the code to make the snake eat the food
@@ -128,7 +129,7 @@ var snakeGame = function(){
     //Lets first create a generic function to paint cells
     function paint_cell(x, y)
     {
-        ctx.fillStyle = "blue";
+        ctx.fillStyle = "red";
         ctx.fillRect(x*cw, y*cw, cw, cw);
         ctx.strokeStyle = "white";
         ctx.strokeRect(x*cw, y*cw, cw, cw);
@@ -156,6 +157,12 @@ var snakeGame = function(){
         else if(key == "40" && d != "up") d = "down";
         //The snake is now keyboard controllable
     })
+    window.addEventListener("keydown", function(e) {
+        // space and arrow keys
+        if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+    }, false);
 
 
 

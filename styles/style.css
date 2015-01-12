@@ -1,0 +1,95 @@
+html {
+    background-color: forestgreen;
+    height: 100%;
+}
+
+#menu {
+    text-align: center;
+}
+
+
+header {
+    margin: 3%;
+    text-align: center;
+    color: black;
+    border-color: #000000;
+    underline-color: black;
+    border: groove;
+    border-color: darkgreen;
+
+}
+
+#loginUser, #registerUser {
+    text-align: center;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    padding: 2%;
+    vertical-align: top;
+    font-size: 1.3rem;
+    box-shadow: 1px 1px 1px 1px #888888;
+    border: solid 1px #000;
+}
+
+.main-header {
+    color: #000000;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    font-size: 1.3rem;
+    margin: 2% 1%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: darkgreen;
+    position: static;
+}
+
+#gameSpace {
+    text-align: center;
+    background-color: black;
+    z-index: -1; position:relative;
+}
+
+li.nav-button {
+    font-size: 1.3rem;
+    display: inline-block;
+    margin: 0 7px;
+    background: purple;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+li.nav-button > a {
+    color: #000000;
+}
+
+li.nav-button:hover {
+    background: blue;
+}
+
+li.nav-button > a {
+    padding: 10px;
+    border: solid 1px gray;
+    text-decoration: none;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+}
+
+.games-display {
+    text-align: center;
+}
+
+#currentUser{
+    font-family: Calibri;
+    font-size: larger;
+}

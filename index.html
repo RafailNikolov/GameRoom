@@ -5,12 +5,19 @@
     <title></title>
 </head>
 <body>
+<link rel="stylesheet" href="styles/style.css"/>
 <script src="scripts/libs/jquery-2.1.1.js"></script>
 <script src="scripts/gameRoomApp.js"></script>
 <script src="scripts/ajaxRequester.js"></script>
 <script src="scripts/userSession.js"></script>
 <script src="scripts/snakeGame.js"></script>
-<header><h1 class="site-header">Game Room<span></span></h1></header>
+<header><h1 class="site-header"><img src="img/Dice.jpg" alt="Glowing Dice" height="125" width="200">
+    <img src="img/playing-cards1.jpg" alt="Playing Cards" height="125" width="200">
+    <img src="img/ChessSet.jpg" alt="ChessSet" height="125" width="200">
+    <img src="img/galaga.jpg" alt="Space Invaders" height="125" width="200">
+    <img src="img/images.jpg" alt="Arkade Games" height="125" width="200">
+    <h2><u>Game Room</u></h2>
+        </h1></header>
 <nav id="menu">
     <ul id="loginRegisterMenu">
         <li class="nav-button"><a href="#" id="btnLoginView">Login</a></li>
@@ -64,10 +71,10 @@
         <header class="main-header">GAME LIST</header>
         <h1>YOU MUST BE LOGGED IN TO PLAY.</h1>
         <ul>
-            <li>SNAKE GAME</li>
-            <li>GAME 2</li>
-            <li>GAME 3</li>
-            <li>GAME 4</li>
+            <li><h1>SNAKE GAME </h1><img src="img/snakeGame.png" alt="Arkade Games" height="300" width="300"></li><hr>
+            <li><h1>GAME 2</h1></li><hr>
+            <li><h1>GAME 3</h1></li><hr>
+            <li><h1>GAME 4</h1></li><hr>
         </ul>
     </div>
 </section>
@@ -76,21 +83,21 @@
 
 <section>
     <div class="games-display" id="gameListDisplayLogin">
+        <span id="currentUser"></span>
+        <br />
         <a href="#" id="btnLogout">Logout</a>
         <header class="main-header">GAME LIST</header>
         <ul>
-            <li><a href="#" id="btnGame1">Snake Game</a></li>
-            <li><a href="#" id="btnGame2">Game 2</a></li>
-            <li><a href="#" id="btnGame3">Game 3</a></li>
-            <li><a href="#" id="btnGame4">Game 4</a></li>
+            <li><a href="#" id="btnGame1"><h1>Snake Game</h1></a><img src="img/snakeGame.png" alt="Arkade Games" height="300" width="300"></li><hr>
+            <li><a href="#" id="btnGame2"><h1>Game 2</h1></a></li><hr>
+            <li><a href="#" id="btnGame3"><h1>Game 3</h1></a></li><hr>
+            <li><a href="#" id="btnGame4"><h1>Game 4</h1></a></li><hr>
         </ul>
     </div>
 </section>
 
 <br />
-
-
-<canvas id="canvas" width="450" height="450"></canvas>
+<section id="gameSpace"></section>
 <footer>7 soft</footer>
 
 </body>
