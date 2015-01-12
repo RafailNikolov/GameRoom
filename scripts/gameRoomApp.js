@@ -20,6 +20,7 @@ var gameApp = (function() {
         $("#login-button").click(loginClicked);
         $("#btnLogout").click(logoutClicked);
         $("#btnGame1").click(snakeGameView);
+        $("#btnGame2").click(spaceShooterView);
     }
 
 
@@ -27,11 +28,17 @@ var gameApp = (function() {
 //-----------------------------------VIEWS---------------------------------------------------
 
    function showLoginRegisterView(){
-       $("#loginRegisterMenu").show();
-       $("#registerUser").hide();
-       $("#loginUser").hide();
-       $("#gameListDisplay").hide();
-       $("#gameListDisplayLogin").hide();
+       var currentUser = userSession.getCurrentUser();
+       if(currentUser){
+           showLoginGameList();
+       }
+       else {
+           $("#loginRegisterMenu").show();
+           $("#registerUser").hide();
+           $("#loginUser").hide();
+           $("#gameListDisplay").hide();
+           $("#gameListDisplayLogin").hide();
+       }
    }
 
    function showRegisterView(){
@@ -78,6 +85,16 @@ var gameApp = (function() {
        $("#canvas").show();
        snakeGame();
    }
+
+    function spaceShooterView(){
+        $("#loginRegisterMenu").hide();
+        $("#registerUser").hide();
+        $("#loginUser").hide();
+        $("#gameListDisplay").hide();
+        $("#gameListDisplayLogin").hide();
+        $("#canvas").show();
+        spaceShooterGame();
+    }
 
 
     //------------------------REGISTER--------------

@@ -53,7 +53,7 @@ footer {
 
 #gameSpace {
     text-align: center;
-    background-color: black;
+    background-color: forestgreen;
     z-index: -1; position:relative;
 }
 

@@ -85,7 +85,8 @@ var snakeGame = function(){
                 init()
             } else {
                 alert('Your score is : ' + score);
-                location.reload();
+            //location.reload();
+                history.go(0);
             }
             //  init();
             //Lets organize the code a bit now.
@@ -157,6 +158,7 @@ var snakeGame = function(){
         else if(key == "40" && d != "up") d = "down";
         //The snake is now keyboard controllable
     })
+    //Keyboard does not control browser scroll
     window.addEventListener("keydown", function(e) {
         // space and arrow keys
         if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
