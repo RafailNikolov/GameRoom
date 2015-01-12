@@ -21,6 +21,8 @@ var gameApp = (function() {
         $("#btnLogout").click(logoutClicked);
         $("#btnGame1").click(snakeGameView);
         $("#btnGame2").click(spaceShooterView);
+        $("#btnProfile").click(profileView);
+        $("#btnGames").click(showLoginGameList);
     }
 
 
@@ -38,6 +40,7 @@ var gameApp = (function() {
            $("#loginUser").hide();
            $("#gameListDisplay").hide();
            $("#gameListDisplayLogin").hide();
+           $("#profileView").hide();
        }
    }
 
@@ -47,7 +50,9 @@ var gameApp = (function() {
        $("#loginUser").hide();
        $("#gameListDisplay").hide();
        $("#gameListDisplayLogin").hide();
-    }
+       $("#profileView").hide();
+
+   }
 
     function showLoginView(){
         $("#loginRegisterMenu").hide();
@@ -55,6 +60,8 @@ var gameApp = (function() {
         $("#loginUser").show();
         $("#gameListDisplay").hide();
         $("#gameListDisplayLogin").hide();
+        $("#profileView").hide();
+
     }
 
     function showGameListView(){
@@ -63,7 +70,8 @@ var gameApp = (function() {
         $("#loginUser").hide();
         $("#gameListDisplay").show();
         $("#gameListDisplayLogin").hide();
-        //TODO
+        $("#profileView").hide();
+
     }
 
 
@@ -73,8 +81,11 @@ var gameApp = (function() {
        $("#loginUser").hide();
        $("#gameListDisplay").hide();
        $("#gameListDisplayLogin").show();
+       $("#profileView").hide();
        var currentUser = userSession.getCurrentUser();
        $('#gameListDisplayLogin > span').text("User : " +currentUser.username);
+       $('#userProfile').text('asfasfasfasfasf');
+
    }
    function snakeGameView(){
        $("#loginRegisterMenu").hide();
@@ -83,6 +94,7 @@ var gameApp = (function() {
        $("#gameListDisplay").hide();
        $("#gameListDisplayLogin").hide();
        $("#canvas").show();
+       $("#profileView").hide();
        snakeGame();
    }
 
@@ -93,7 +105,19 @@ var gameApp = (function() {
         $("#gameListDisplay").hide();
         $("#gameListDisplayLogin").hide();
         $("#canvas").show();
+        $("#profileView").hide();
         spaceShooterGame();
+    }
+
+    function profileView(){
+        $("#profileView").show();
+        $("#loginRegisterMenu").hide();
+        $("#registerUser").hide();
+        $("#loginUser").hide();
+        $("#gameListDisplay").hide();
+        $("#gameListDisplayLogin").hide();
+        var currentUser = userSession.getCurrentUser();
+        $("#userWelcome").text('Welcome ' + currentUser.username);
     }
 
 
