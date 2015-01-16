@@ -20,7 +20,7 @@ var gameApp = (function() {
         $("#login-button").click(loginClicked);
         $("#btnLogout").click(logoutClicked);
         $("#btnGame1").click(snakeGameView);
-        $("#btnGame2").click(spaceShooterView);
+        $("#btnGame2").click(tetrisGameView);
         $("#btnProfile").click(profileView);
         $("#btnGames").click(showLoginGameList);
     }
@@ -98,7 +98,7 @@ var gameApp = (function() {
        snakeGame();
    }
 
-    function spaceShooterView(){
+    function tetrisGameView(){
         $("#loginRegisterMenu").hide();
         $("#registerUser").hide();
         $("#loginUser").hide();
@@ -106,7 +106,7 @@ var gameApp = (function() {
         $("#gameListDisplayLogin").hide();
         $("#canvas").show();
         $("#profileView").hide();
-        spaceShooterGame();
+        tetrisGame();
     }
 
     function profileView(){

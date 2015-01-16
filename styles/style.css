@@ -1,5 +1,5 @@
 html {
-    background-color: forestgreen;
+    background-color: teal;
     height: 100%;
 }
 
@@ -47,13 +47,13 @@ footer {
     margin-top: 5%;
     font-size: 1.1rem;
     padding: 10px;
-    background-color: darkgreen;
+    background-color: #3498DB;
     position: static;
 }
 
 #gameSpace {
     text-align: center;
-    background-color: forestgreen;
+    background-color: teal;
     z-index: -1; position:relative;
 }
 
@@ -61,7 +61,7 @@ li.nav-button {
     font-size: 1.3rem;
     display: inline-block;
     margin: 0 7px;
-    background: purple;
+    background: white;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
     -o-transition: all .25s ease;
