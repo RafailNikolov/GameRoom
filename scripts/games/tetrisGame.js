@@ -5,5 +5,7 @@ var tetrisGame = function(){
     var w = $("#canvas").width();
     var h = $("#canvas").height();
 
+    var elementDrop ;
+
 
 }
