@@ -82,15 +82,14 @@ var snakeGame = function(){
         if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx, ny, snake_array))
         {
             if (confirm('Game Over.   Play Again?')) {
-                init()
+                init();
+                return;
             } else {
                 alert('Your score is : ' + score);
-            //location.reload();
                 history.go(0);
             }
-            //  init();
-            //Lets organize the code a bit now.
-            return;
+
+
         }
 
         //Lets write the code to make the snake eat the food
